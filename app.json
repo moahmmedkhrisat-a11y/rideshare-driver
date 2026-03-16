@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "rideshare-driver-app",
+    "name": "تطبيق السائق",
     "slug": "rideshare-driver-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,15 +15,28 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.rideshare.driver",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Rideshare Driver to use your location to share it with riders."
+        }
+      ]
+    ]
   }
 }
